@@ -1,0 +1,203 @@
+// ----------------------------------------------------------------------
+// $Id: example.rc 265 2005-06-22 19:42:57Z helmut $
+// This is an example input file for checkrc.pl.
+// ----------------------------------------------------------------------
+// NOTE: this demo input file will not make sense to Visual Studio!
+// ----------------------------------------------------------------------
+// For demonstration purposes, I have reduced a real world file to:
+// - one dialog
+// - a small menu hierarchy
+// - few strings
+// - in two languages only.
+// ----------------------------------------------------------------------
+// Process with:
+//   perl checkrc.pl -cmd compare -lang1 de -lang2 en -resource example.rc > example.htm
+// ----------------------------------------------------------------------
+//
+//Microsoft Developer Studio generated resource script.
+//
+#include "Resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Datei"
+    BEGIN
+        MENUITEM "Losungstext &aktualisieren...\tCtrl+A", ID_FILE_ACTUALIZE
+        MENUITEM "Losungstexte &organisieren...\tCtrl+O", ID_FILE_ORGANIZE
+        MENUITEM SEPARATOR
+        MENUITEM "&Beenden",                    ID_APP_EXIT
+    END
+    POPUP "&Bearbeiten"
+    BEGIN
+        MENUITEM "&Kopieren\tCtrl+C",           ID_EDIT_COPY
+        MENUITEM "Bibel&leseangaben kopieren\tCtrl+L", ID_EDIT_COPY_READINGS
+        MENUITEM "&Einstellungen...",           ID_EDIT_OPTIONS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Über w32los"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "w32los",IDC_STATIC_W32LOS_VER,80,10,90,8,SS_NOPREFIX
+    LTEXT           "Die Homepage der Freeware-Losungsprogramme ist",
+                    IDC_STATIC,40,80,180,10
+    PUSHBUTTON      "OK",IDOK,178,7,50,14,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,10,20,20
+    LTEXT           "Autor: helmut_steeb@losung.de",IDC_STATIC,40,110,180,8
+    LTEXT           "w32los.exe",IDC_STATIC,40,10,36,8
+    LTEXT           "Dieses Programm ist Freeware und darf frei verteilt werden.",
+                    IDC_STATIC,40,40,180,20
+    LTEXT           "Bitte beachten Sie die Lizenzbedingungen für die Losungstexte!",
+                    IDC_STATIC,40,60,180,20
+    LTEXT           "http://www.losung.de/",IDC_STATIC,40,90,180,9
+END
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Zeigt Informationen über das Programm, die Version und Copyright\nÜber w32los"
+    ID_APP_EXIT             "Beendet das Programm\nBeenden"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_COPY            "Kopiert den Text in die Zwischenablage\nKopieren"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Fenstergröße ändern"
+    AFX_IDS_SCMOVE          "Fensterposition verschieben"
+    AFX_IDS_SCMINIMIZE      "Fenster zu Symbol minimieren"
+    AFX_IDS_SCMAXIMIZE      "Fenster auf volle Größe maximieren"
+END
+
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Actualize watchwords...\tCtrl+A", ID_FILE_ACTUALIZE
+        MENUITEM "&Organize watchwords...\tCtrl+O", ID_FILE_ORGANIZE
+        MENUITEM "Configure &Email signature...", ID_FILE_SIGNATURE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "Copy bible &readings\tCtrl+R", ID_EDIT_COPY_READINGS
+        MENUITEM "&Options...",                 ID_EDIT_OPTIONS
+    END
+END
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About w32los"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "w32los",IDC_STATIC_W32LOS_VER,80,10,90,8,SS_NOPREFIX
+    LTEXT           "The homepage of the freeware watchwords programs is",
+                    IDC_STATIC,40,80,190,10
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,10,20,20
+    LTEXT           "Author contact: helmut_steeb@losung.de",IDC_STATIC,40,
+                    110,137,8
+    LTEXT           "w32los.exe",IDC_STATIC,40,10,36,8
+    LTEXT           "This program is freeware. You may use and distribute it freely.",
+                    IDC_STATIC,40,40,180,20
+    LTEXT           "Please respect the license agreements of the watchwords texts!",
+                    IDC_STATIC,40,60,180,20
+    LTEXT           "http://www.losung.de/",IDC_STATIC,40,90,180,10
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the program\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy the text and put it on the Clipboard\nCopy"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+END
+
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+

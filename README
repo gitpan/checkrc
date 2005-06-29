@@ -1,0 +1,6 @@
+checkrc.pl analyzes Visual Studio resource files (*.rc) and
+a) ... lists languages present; 
+b) ... compares elements of two language sections:
+  - detects difference in types e.g. PUSHBUTTON vs. DEFPUSHBUTTON,
+  - detects dialogs, menus or strings present in only one section,
+  - outputs result in XHTML tables side by side with colours and links next/prev.

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>example.rc</title>
+<style type="text/css">
+.equal { background-color:#CCFFCC;}
+.miss { background-color:#FFCCCC;}
+.consecutive { background-color:#FFEEFF;}
+.convention { font-size:10pt;}
+.indent {text-indent:50pt;}
+body { background-color:#FFFFBD}
+h1   { font-size:24pt; font-weight:bold}
+h2   { font-size:16pt; font-weight:bold; background-color:#FFFF66}
+h3   { font-size:14pt; background-color:#FFFF99; color:maroon; font-weight:bold; }
+</style>
+</head>
+<body>
+<h1><a name='_top' id='_top'>example.rc - Resource file comparison</a></h1>
+<table border='1' cellpadding='5' style='border-collapse:collapse'>
+<tr><th>Resource file</th><td>example.rc</td></tr>
+<tr><th>Language 1</th><td>de</td></tr>
+<tr><th>Language 2</th><td>en</td></tr>
+<tr><th class='miss'># differences</th><td>4 <a href='#err1'>[>>]</a></td></tr>
+</table>
+<h2>Meaning of colours</h2>
+<p class='indent'><span class='equal'>Equal strings</span></p>
+<p class='indent'><span class='miss'>Different types or missing string</span></p>
+<p class='indent'><span class='consecutive'>Suspicious data (lines after different types or missing string)</span></p>
+<h2>Contents:</h2>
+<table class='indent'>
+<tr><td><a href='#dialogs'>Dialogs</a></td></tr>
+<tr><td><a href='#strings'>String tables</a></td></tr>
+<tr><td><a href='#menus'>Menus</a></td></tr>
+</table>
+<h2><a name='dialogs' id='dialogs'>Dialogs</a></h2>
+<div class='convention'>
+<p>Convention: dialog items of both resources are listed in parallel in the order defined in the resource file.
+If types are different, <em>all</em> following items are highlighted (no smart diff!).</p>
+</div>
+<h3>Dialog IDD_ABOUTBOX</h3>
+<table width='100%' border='1' cellpadding='5' style='border-collapse:collapse'>
+<tr><td>CAPTION</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class='equal'>
+<td>LTEXT</td>
+<td>w32los</td>
+<td>w32los</td>
+</tr>
+<tr>
+<td>LTEXT</td>
+<td>Die Homepage der Freeware-Losungsprogramme ist</td>
+<td>The homepage of the freeware watchwords programs is</td>
+</tr>
+<tr class='miss'>
+<td>PUSHBUTTON &lt;-&gt; DEFPUSHBUTTON<a name='err1' id='err1'></a><a href='#_top'>(top)</a><a href='#err2'>[&gt;&gt;]</a></td>
+<td>OK</td>
+<td>OK</td>
+</tr>
+<tr class='consecutive'>
+<td>LTEXT</td>
+<td>Autor: helmut_steeb@losung.de</td>
+<td>Author contact: helmut_steeb@losung.de</td>
+</tr>
+<tr class='equal'>
+<td>LTEXT</td>
+<td>w32los.exe</td>
+<td>w32los.exe</td>
+</tr>
+<tr class='consecutive'>
+<td>LTEXT</td>
+<td>Dieses Programm ist Freeware und darf frei verteilt werden.</td>
+<td>This program is freeware. You may use and distribute it freely.</td>
+</tr>
+<tr class='consecutive'>
+<td>LTEXT</td>
+<td>Bitte beachten Sie die Lizenzbedingungen für die Losungstexte!</td>
+<td>Please respect the license agreements of the watchwords texts!</td>
+</tr>
+<tr class='equal'>
+<td>LTEXT</td>
+<td>http://www.losung.de/</td>
+<td>http://www.losung.de/</td>
+</tr>
+</table>
+<p><a href='#_top'>(top)</a></p><hr />
+<h2><a name='strings' id='strings'>String tables</a></h2>
+<div class='convention'>
+<p>Convention: all string table entries of both resources are listed in parallel, sorted by the symbolic resourceID.</p>
+</div>
+<table width='100%' border='1' cellpadding='5' style='border-collapse:collapse'>
+<tr><td>AFX_IDS_SCMAXIMIZE</td>
+<td>Fenster auf volle Größe maximieren</td>
+
+<td class='miss'><a href='#err1'>[&lt;&lt;]</a><a name='err2' id='err2'></a><a href='#_top'>(top)</a><a href='#err3'>[&gt;&gt;]</a></td>
+</tr>
+<tr><td>AFX_IDS_SCMINIMIZE</td>
+<td>Fenster zu Symbol minimieren</td>
+
+<td>Reduce the window to an icon</td>
+</tr>
+<tr><td>AFX_IDS_SCMOVE</td>
+<td>Fensterposition verschieben</td>
+
+<td>Change the window position</td>
+</tr>
+<tr><td>AFX_IDS_SCSIZE</td>
+<td>Fenstergröße ändern</td>
+
+<td>Change the window size</td>
+</tr>
+<tr><td>ID_APP_ABOUT</td>
+<td>Zeigt Informationen über das Programm, die Version und Copyright\nÜber w32los</td>
+
+<td>Display program information, version number and copyright\nAbout</td>
+</tr>
+<tr><td>ID_APP_EXIT</td>
+<td>Beendet das Programm\nBeenden</td>
+
+<td>Quit the program\nExit</td>
+</tr>
+<tr><td>ID_EDIT_COPY</td>
+<td>Kopiert den Text in die Zwischenablage\nKopieren</td>
+
+<td>Copy the text and put it on the Clipboard\nCopy</td>
+</tr>
+</table>
+<p><a href='#_top'>(top)</a></p><hr />
+<h2><a name='menus' id='menus'>Menus</a></h2>
+<div class='convention'>
+<p>Convention: menus items of both resources are listed in parallel in the order defined in the resource file,
+with recursion into popup menus. If types (POPUP/MENUITEM) are different, <em>all</em> following items in the same menu
+are highlighted (no smart diff!).</p>
+<p>Items of type SEPARATOR are completely ignored.</p>
+</div>
+<h3>Menu IDR_MAINFRAME</h3>
+<table width='100%' border='1' cellpadding='5' style='border-collapse:collapse'>
+<tr>
+<td>+</td>
+<td>&amp;Datei</td>
+<td>&amp;File</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;+</td>
+<td>Losungstext &amp;aktualisieren...\tCtrl+A</td>
+<td>&amp;Actualize watchwords...\tCtrl+A</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;+</td>
+<td>Losungstexte &amp;organisieren...\tCtrl+O</td>
+<td>&amp;Organize watchwords...\tCtrl+O</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;+</td>
+<td>&amp;Beenden</td>
+<td>Configure &amp;Email signature...</td>
+</tr>
+<tr class='miss'>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;+<a href='#err2'>[&lt;&lt;]</a><a name='err3' id='err3'></a><a href='#_top'>(top)</a><a href='#err4'>[&gt;&gt;]</a></td>
+<td colspan='2'>MenuItem 3 only in language 2: MENUITEM E&xit <a href='#err3'>[&lt;&lt;]</a><a name='err4' id='err4'></a><a href='#_top'>(top)</a></td>
+</tr>
+<tr class='consecutive'>
+<td>+</td>
+<td>&amp;Bearbeiten</td>
+<td>&amp;Edit</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;+</td>
+<td>&amp;Kopieren\tCtrl+C</td>
+<td>&amp;Copy\tCtrl+C</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;+</td>
+<td>Bibel&amp;leseangaben kopieren\tCtrl+L</td>
+<td>Copy bible &amp;readings\tCtrl+R</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;+</td>
+<td>&amp;Einstellungen...</td>
+<td>&amp;Options...</td>
+</tr>
+</table>
+<p><a href='#_top'>(top)</a></p><hr />
+</body>
+</html>
