@@ -6,7 +6,7 @@ use strict;
 #SKIP use Logging::Debug;
 use Getopt::Long;
 
-my $VERSION = 0.1;
+my $VERSION = 0.1.1;
 
 
 =head1 NAME
